@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+}
+
+.header__end {
+  margin-left: auto;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 170%;
+  color: #080808;
+  background: #FAFAFA;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+}
