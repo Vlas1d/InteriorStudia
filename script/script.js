@@ -21,6 +21,21 @@ document.addEventListener('DOMContentLoaded', function () {
     */
 });
 
+const swiper = new Swiper('.bg-slider__wrapper', {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+    },
+});
+
+$('.city-list__items p').on('click', function () {
+    $('#ct-list').prop('checked', false);
+});
+
+$('.bg-slider__next>h1').html('Perfect<br> proportions'); //$('.bg-slider .swiper-slide-next').textContent
 
 //------------------------------------------------------------------------------------------
 function testWebP(callback) {

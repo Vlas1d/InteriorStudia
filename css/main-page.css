@@ -1,0 +1,136 @@
+.bg-slider {
+  position: relative;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  height: 744px;
+  overflow: visible;
+}
+
+.bg-slider__footer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  left: 64px;
+  z-index: 100;
+  color: #fff;
+}
+
+.bg-slider__footer > span *:not(:last-child) {
+  margin-right: 18px;
+}
+
+.bg-slider__footer > span {
+  margin-right: 122px;
+}
+
+.bg-slider__footer > label {
+  margin-right: 72px;
+}
+
+.bg-slider__footer > a {
+  letter-spacing: 0.06em;
+  margin-right: 32px;
+}
+
+.bg-slider__wrapper {
+  display: flex;
+  width: 100%;
+  height: inherit;
+  overflow: hidden;
+}
+
+.bg-slider .swiper-slide {
+  position: relative;
+  display: flex;
+  width: 85.2%;
+  height: 100%;
+}
+
+.bg-slider .swiper-slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bg-slider .swiper-scrollbar {
+  position: absolute;
+  left: 426px;
+  bottom: 281px;
+  background: rgba(255, 255, 255, 0.32);
+  transform: scale(0.13);
+  height: 5px;
+}
+
+.bg-slider .swiper-scrollbar-drag {
+  background: #fff;
+  opacity: 1 !important;
+}
+
+.bg-slider input {
+  position: absolute;
+  opacity: 0;
+}
+
+.bg-slider__title {
+  align-self: center;
+  z-index: 10;
+  margin-left: 263px;
+}
+
+.bg-slider__title .discover-button {
+  margin-top: 38px;
+  color: #fff;
+}
+
+.bg-slider__next {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  right: 50px;
+  bottom: 48px;
+  z-index: 10;
+}
+
+.bg-slider__next h1 {
+  font-size: 48px;
+  line-height: 47px;
+  letter-spacing: 0.04em;
+}
+
+.bg-slider__next span {
+  margin: 2px 0px 0px 12px;
+  color: #fff;
+  letter-spacing: 0.06em;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 140px 0px 0px;
+}
+
+.about__text {
+  padding-top: 80px;
+  width: 515px;
+}
+
+.about__text h2 {
+  margin-bottom: 25px;
+}
+
+.about__text p:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.about__text div {
+  margin-bottom: 57px;
+}
+
+.about .discover-button > hr {
+  background: #000;
+}
