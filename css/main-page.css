@@ -3,7 +3,7 @@
   font-weight: 600;
   font-size: 11px;
   line-height: 13px;
-  height: 744px;
+  height: 100vh;
   overflow: visible;
 }
 
@@ -85,6 +85,10 @@
   color: #fff;
 }
 
+.bg-slider__title .discover-button hr {
+  background: #fff;
+}
+
 .bg-slider__next {
   position: absolute;
   display: flex;
@@ -99,7 +103,11 @@
 .bg-slider__next h1 {
   font-size: 48px;
   line-height: 47px;
-  letter-spacing: 0.04em;
+  font-family: "ProximaNova";
+  font-size: 50px;
+  letter-spacing: 0.1em;
+  color: transparent;
+  -webkit-text-stroke: 0.3px #fff;
 }
 
 .bg-slider__next span {
@@ -134,3 +142,110 @@
 .about .discover-button > hr {
   background: #000;
 }
+
+.ceo {
+  display: flex;
+  justify-content: space-between;
+  padding: 71px 18px 133px 0px;
+}
+
+.ceo__image {
+  position: relative;
+}
+
+.ceo__image_move {
+  position: absolute;
+  height: 350px;
+  top: -125px;
+  right: -199px;
+}
+
+.ceo__text {
+  display: flex;
+  align-self: center;
+  margin-top: 37px;
+}
+
+.ceo__text h2 {
+  margin-right: 32px;
+}
+
+.ceo__text p {
+  width: 380px;
+  font-size: 20px;
+  line-height: 170.66%;
+}
+
+.gallery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery__move-text {
+  position: absolute;
+  top: 350px;
+  opacity: 0.06;
+}
+
+.gallery__head {
+  text-align: center;
+  width: 450px;
+  padding: 140px 0px 133px;
+}
+
+.gallery__head p {
+  margin-top: 31px;
+  color: #828282;
+}
+
+.gallery__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.gallery__link {
+  display: flex;
+  max-width: 653px;
+  max-height: 653px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.gallery__link img,
+.gallery__link picture {
+  width: 243px !important;
+  height: 323px !important;
+  object-position: top !important;
+  object-fit: cover !important;
+}
+
+.gallery__link h4 {
+  color: #000;
+  margin-bottom: 24px;
+  margin-top: -46px;
+}
+
+.gallery .discover-button hr {
+  background: #fff;
+}
+
+.request {
+  padding: 105px 0px 143px;
+}
+
+.lorem {
+  height: 814px;
+}
+
+.contacts {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)), url("../img/contacts-bg.png");
+  background-size: cover !important;
+}
+
+.webp .contacts { background: linear-gradient(90deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)), url(../img/contacts-bg.webp); }

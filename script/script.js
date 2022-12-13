@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-
     /*
     const form = document.getElementById('form1');
     const pop_up = document.getElementById('pop-up');
@@ -21,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     */
 });
 
+
 const swiper = new Swiper('.bg-slider__wrapper', {
     loop: true,
     slidesPerView: "auto",
@@ -31,11 +30,72 @@ const swiper = new Swiper('.bg-slider__wrapper', {
     },
 });
 
+
+
+
+
+
+setInterval(function () {
+    if ($('.bg-slider__next>h1').text() != $('.bg-slider .swiper-slide-next h1').text()) {
+        $('.bg-slider__next>h1').html($('.bg-slider .swiper-slide-next h1').clone());
+    }
+}, 250);
+
+//-------------LIST-ITEMS-----------------------------------------------------------------
+
+const sliderListItems = document.getElementsByName('city');
 $('.city-list__items p').on('click', function () {
     $('#ct-list').prop('checked', false);
+    for (let i = 0; i < sliderListItems.length; i++) {
+        if (sliderListItems[i].checked) {
+            $('.city-list__enter').html(`${sliderListItems[i].value}`);
+        }
+    }
 });
 
-$('.bg-slider__next>h1').html('Perfect<br> proportions'); //$('.bg-slider .swiper-slide-next').textContent
+//-------------REQUEST-IMG-----------------------------------------------------------------
+
+if (window.innerWidth >= 1100) {
+    var reqImg = document.querySelectorAll('.c-request__img img');
+    const reqImgRotate = Array('rotate(-5.99deg)', 'rotate(-0.33deg)', 'rotate(-5.81deg)', 'rotate(-1.72deg)',
+        'rotate(-10.5deg)', 'rotate(-5.99deg)', 'rotate(-0.33deg)', 'rotate(-5.81deg)', 'rotate(-1.72deg)', 'rotate(-10.5deg)');
+    const reqIimgMarginTop = Array('0px', '-10.4px', '-24.4px', '-46px', '-77px', '-92px', '-102px', '-116px', '-138px', '-169px');
+    const reqIimgMarginLeft = Array('0px', '52.8px', '105.3px', '161px', '226px', '263.5px', '316.5px', '369px', '424.7px', '490px');
+
+    for (let i = 0; i < reqImg.length; i++) {
+        reqImg[i].style.marginTop = reqIimgMarginTop[i];
+        reqImg[i].style.transform = reqImgRotate[i];
+        reqImg[i].style.marginLeft = reqIimgMarginLeft[i];
+        //reqImg[i].style.transition = 'all 1s ease 2.5s';
+    }
+}
+
+//-------------LOREM-IMG-----------------------------------------------------------------
+
+var loremImg = document.querySelectorAll('.c-lorem__img > *');
+var loremImgHorizontal = Array('-136px', '214px', '80px', '-205px', '389px', '-151px', '47px', '255px');
+var loremImgVertical = Array('-161px', '-10px', '28px', '120px', '-110px', '33px', '0px', '-205px');
+for (let i = 0; i < loremImg.length; i++) {
+    if (i < loremImg.length / 2) {
+        loremImg[i].style.left = loremImgHorizontal[i];
+        if (i >= loremImg.length / 4) {
+            loremImg[i].style.top = loremImgVertical[i];
+        }
+        else {
+            loremImg[i].style.bottom = loremImgVertical[i];
+        }
+    }
+    if (i >= loremImg.length / 2) {
+        loremImg[i].style.right = loremImgHorizontal[i];
+        if (i >= (loremImg.length / 4) + (loremImg.length / 2)) {
+            loremImg[i].style.top = loremImgVertical[i];
+        }
+        else {
+            loremImg[i].style.bottom = loremImgVertical[i];
+        }
+    }
+}
+
 
 //------------------------------------------------------------------------------------------
 function testWebP(callback) {
