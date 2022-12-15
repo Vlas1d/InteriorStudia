@@ -45,7 +45,8 @@
 }
 
 .opacity-button {
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: none;
 }
 
 .footer {
@@ -110,6 +111,8 @@
 
 .c-lorem__text {
   z-index: 20;
+  mix-blend-mode: difference;
+  color: #fff;
 }
 
 .c-lorem__text h1 {
@@ -121,7 +124,6 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
-  color: #080808;
   opacity: 0.6;
 }
 
@@ -322,6 +324,7 @@ button {
   align-items: center;
   justify-content: center;
   font-weight: 600 !important;
+  box-shadow: 0px 0px 2px #000;
 }
 
 .button-light {
@@ -337,6 +340,15 @@ button {
   line-height: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  text-shadow: 1px 0px 2px #000;
+  cursor: pointer;
+  width: 187px;
+  height: 15px;
+  overflow: hidden;
+}
+
+.discover-button hr {
+  box-shadow: 2px 0px 4px #000;
 }
 
 .discover-button > hr:first-child {
@@ -370,10 +382,6 @@ button {
   align-items: center;
   width: 117px;
   height: 24px;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 1.15336px 1.22544px rgba(0, 0, 0, 0.2), inset 0px -0.288339px 0.0720847px rgba(255, 255, 255, 0.23);
-  backdrop-filter: blur(1px);
-  border-radius: 8.70783px;
   letter-spacing: 0em;
   color: inherit;
   letter-spacing: 0.06em;
@@ -396,28 +404,27 @@ button {
 
 #ct-list:checked ~ .city-list > .city-list__items {
   visibility: visible;
-  opacity: 1;
-  transition: opacity 0.5s ease 0s;
+  height: 80px;
+  transition: all 0.5s ease 0s;
 }
 
 #ct-list:checked ~ .city-list > picture:nth-child(3) {
   transform: rotate(0deg);
-  transition: transform 0.75s ease 0s;
+  transition: transform 0.5s ease 0s;
 }
 
 .city-list__items {
   display: flex;
   visibility: hidden;
-  opacity: 0;
+  height: 0px;
+  overflow-y: scroll;
   flex-direction: column;
   position: absolute;
   bottom: 110%;
   left: 50%;
   transform: translate(-50%, 0%);
-  color: rgb(195, 195, 195);
   padding: 3px 1px;
   width: 100px;
-  background: rgba(125, 125, 125, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 5px 5px 0px 0px;
 }
@@ -488,9 +495,49 @@ button {
   width: 100%;
 }
 
+@media (min-width: 1099.9px) {
+  .city-list {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1.15336px 1.22544px rgba(0, 0, 0, 0.2), inset 0px -0.288339px 0.0720847px rgba(255, 255, 255, 0.23);
+    backdrop-filter: blur(1px);
+    border-radius: 8.70783px;
+  }
+
+  .city-list__items {
+    background: rgba(125, 125, 125, 0.85);
+    color: rgb(195, 195, 195);
+  }
+}
+
 @media (min-width: 1100px) {
+  .header__logo:hover {
+    transform: scale(2) rotate(360deg);
+    transition: transform 0.25s ease 0s;
+  }
+
   .menu__item:not(:last-child) {
     margin-right: 48px;
+  }
+
+  .menu__item:hover {
+    transform: scale(1.5);
+    transition: transform 0.5s ease 0s;
+  }
+
+  .discover-button:hover {
+    text-shadow: 2px 0px 4px #000;
+  }
+
+  .discover-button:hover hr {
+    box-shadow: 2px 0px 4px #000;
+    margin: 0px;
+    width: 100%;
+  }
+
+  .discover-button:hover span {
+    position: absolute;
+    transform: translate(30%, -70%) scale(1.3);
+    transition: all 0.5s ease 0s;
   }
 }
 
@@ -518,5 +565,19 @@ button {
 
   .c-request__img {
     display: none;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  .city-list {
+    border: 1px solid #C4C4C4;
+    border-radius: 88px;
+  }
+
+  .city-list__items {
+    color: rgb(225, 225, 225);
   }
 }

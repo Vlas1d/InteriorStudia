@@ -29,6 +29,15 @@ const swiper = new Swiper('.bg-slider__wrapper', {
         draggable: true,
     },
 });
+const swiperAbout = new Swiper('.about-slider__images', {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+    },
+});
 
 
 
@@ -96,8 +105,11 @@ for (let i = 0; i < loremImg.length; i++) {
     }
 }
 
+//-------------MOUSE-PARALAX-----------------------------------------------------------------
 
-//------------------------------------------------------------------------------------------
+
+
+//-------------CHECK-WEBP-----------------------------------------------------------------
 function testWebP(callback) {
 
     var webP = new Image();
