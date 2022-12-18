@@ -11,7 +11,7 @@
   padding: 0px 4.45% 0px 4.3%;
   font-weight: 600;
   mix-blend-mode: difference;
-  color: #999;
+  color: rgb(179, 179, 179);
   z-index: 999;
 }
 
@@ -197,6 +197,43 @@
   line-height: 21px;
 }
 
+@font-face {
+  font-family: "ProximaNova";
+  src: local("ProximaNova-Bold"), url("../fonts/ProximaNova-Bold.woff") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300;
+}
+
 *,
 *::after,
 *::before {
@@ -234,22 +271,22 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 36px !important;
   line-height: 44px;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 28px !important;
   line-height: 35px;
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 22px !important;
   line-height: 28px;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 16px !important;
   line-height: 22px;
 }
 
@@ -278,6 +315,12 @@ main {
   position: relative;
 }
 
+.main {
+  background: #fff;
+  color: #000;
+  transition: all 2.5s ease 0s;
+}
+
 section {
   position: relative;
 }
@@ -293,7 +336,7 @@ section {
 }
 
 .container_ {
-  max-width: 1314px;
+  max-width: 1312px;
   margin: 0px auto;
 }
 
@@ -318,12 +361,13 @@ button {
 }
 
 .button {
-  width: 183px;
-  height: 48px;
+  padding: 0px 49px;
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600 !important;
+  letter-spacing: 0.06em;
   box-shadow: 0px 0px 2px #000;
 }
 
@@ -369,11 +413,14 @@ button {
   position: absolute;
 }
 
-@font-face {
-  font-family: "ProximaNova";
-  src: local("ProximaNova-Bold"), url("../fonts/ProximaNova-Bold.woff") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+.dark-bg {
+  background: #000;
+  color: #fff;
+}
+
+.light-bg {
+  background: #fff;
+  color: #000;
 }
 
 .city-list {
@@ -387,6 +434,10 @@ button {
   letter-spacing: 0.06em;
   cursor: pointer;
   padding: 0px 13px;
+}
+
+.city-list__enter {
+  text-shadow: 0px 0px 4px #000;
 }
 
 .city-list > picture:nth-child(1),
@@ -459,7 +510,6 @@ button {
 .c-gallery {
   display: flex;
   flex-direction: column;
-  gap: 1px;
 }
 
 .c-gallery__one-item {
@@ -493,6 +543,42 @@ button {
 
 .c-gallery__two-item > div img {
   width: 100%;
+}
+
+.worker-mail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 74px;
+}
+
+.worker-mail h2 {
+  line-height: 51px;
+}
+
+.worker-mail_input {
+  position: relative;
+  max-width: 382px;
+  height: 35px;
+  border-bottom: 1px solid #515151;
+}
+
+.worker-mail_input input {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+  font-size: 20px;
+  line-height: 170.66%;
+  opacity: 0.7;
+  letter-spacing: 0.09em;
+}
+
+.worker-mail_input button {
+  position: absolute;
+  top: 15%;
+  right: 3px;
+  mix-blend-mode: difference;
+  opacity: 0.5;
 }
 
 @media (min-width: 1099.9px) {

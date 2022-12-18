@@ -39,9 +39,31 @@ const swiperAbout = new Swiper('.about-slider__images', {
     },
 });
 
+//-------------BACKGROUND-COLOR-CHANGE----------------------------------------------------------------
 
+/*
+function onEntry(entry) {
+    entry.forEach(change => {
 
+        if (change.isIntersecting) {
+            $('.main').toggleClass('dark-bg');
+        }
 
+    });
+}
+
+let options = {
+    threshold: [0.1]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.change-background');
+//let elements = document.querySelectorAll('.light-background');
+
+for (el of elements) {
+    observer.observe(el);
+}
+*/
+//-------------ADAPTIVE-TEXT-NEXT-SLIDER-----------------------------------------------------------------
 
 
 setInterval(function () {

@@ -177,12 +177,9 @@
 
 .worker {
   display: flex;
-  padding: 140px 0px 190px;
+  padding: 136px 17px 190px 2px;
   justify-content: space-between;
-}
-
-.worker__mail_input {
-  background: #000;
+  min-height: 665px;
 }
 
 .worker__info {
@@ -191,6 +188,23 @@
 
 .worker__info p {
   max-width: 365px;
+  margin-bottom: 20px;
+}
+
+.worker__info > span {
+  display: flex;
+  max-width: 356px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.worker__info > span > span > span:not(:last-child) {
+  margin-right: 16px;
+}
+
+.worker__info > span > span {
+  margin-left: auto;
 }
 
 .webp .about-bg__image { background: url(../img/about-bg.webp) bottom/cover no-repeat; }

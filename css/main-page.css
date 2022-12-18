@@ -190,6 +190,11 @@
   align-items: center;
 }
 
+.gallery > .c-gallery > .c-gallery__one-item,
+.gallery > .c-gallery > .c-gallery__two-item {
+  margin-bottom: 2px;
+}
+
 .gallery__move-text {
   position: absolute;
   top: 350px;
