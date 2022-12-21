@@ -182,6 +182,10 @@
   min-height: 665px;
 }
 
+.worker .worker-mail {
+  padding-bottom: 74px;
+}
+
 .worker__info {
   align-self: flex-end;
 }

@@ -82,21 +82,25 @@
   width: 100%;
   height: 368px;
   margin-top: 65px;
-  z-index: 10;
 }
 
 .c-request__info div {
   width: 339px;
   align-self: flex-end;
+  z-index: 1;
 }
 
 .c-request__info p {
   margin-bottom: 45px;
 }
 
-.c-request__info h2 {
+.c-request__info_title {
   justify-self: left;
-  width: 424px;
+  align-self: flex-start !important;
+  width: 424px !important;
+}
+
+.c-request__info h2 {
   line-height: 51px;
 }
 
@@ -266,7 +270,7 @@ h6 {
 
 h1 {
   font-size: 56px;
-  line-height: 68px;
+  line-height: 69px;
   color: #fff;
 }
 
@@ -295,7 +299,12 @@ h6 {
   font-size: inherit;
 }
 
-img {
+p {
+  opacity: 0.75;
+}
+
+img,
+picture {
   width: initial;
   height: initial;
 }
@@ -374,6 +383,14 @@ button {
 .button-light {
   background: #fff;
   color: #080808;
+  cursor: pointer;
+  transition: all 0.7s ease 0s;
+}
+
+.button-light:hover {
+  background: #000;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .discover-button {
@@ -526,10 +543,7 @@ button {
 }
 
 .c-gallery__two-item {
-  display: flex;
-  justify-content: space-between;
   position: relative;
-  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -537,11 +551,7 @@ button {
   position: relative;
 }
 
-.c-gallery__two-item > div {
-  width: 49.7%;
-}
-
-.c-gallery__two-item > div img {
+.c-gallery__two-item img {
   width: 100%;
 }
 
@@ -549,7 +559,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 74px;
 }
 
 .worker-mail h2 {
@@ -559,6 +568,7 @@ button {
 .worker-mail_input {
   position: relative;
   max-width: 382px;
+  width: 100%;
   height: 35px;
   border-bottom: 1px solid #515151;
 }
@@ -567,9 +577,10 @@ button {
   width: 100%;
   height: 100%;
   padding-bottom: 10px;
+  background: transparent;
   font-size: 20px;
   line-height: 170.66%;
-  opacity: 0.7;
+  opacity: 0.8;
   letter-spacing: 0.09em;
 }
 
@@ -578,7 +589,29 @@ button {
   top: 15%;
   right: 3px;
   mix-blend-mode: difference;
-  opacity: 0.5;
+  opacity: 0.6;
+}
+
+@media (min-width: 800px) {
+  .c-gallery__two-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .c-gallery__two-item > * {
+    position: relative;
+  }
+
+  .c-gallery__two-item > div {
+    width: 49.7%;
+  }
+
+  .c-gallery__two-item > div img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1099.9px) {
@@ -608,6 +641,15 @@ button {
   .menu__item:hover {
     transform: scale(1.5);
     transition: transform 0.5s ease 0s;
+  }
+
+  .c-request__info p {
+    text-shadow: 1px 1px 3px #000;
+  }
+
+  .c-request__info h2 {
+    text-shadow: 1px 1px 3px #000;
+    z-index: 1;
   }
 
   .discover-button:hover {
@@ -641,6 +683,21 @@ button {
   .c-request__img > * {
     position: absolute;
   }
+
+  .c-request__img > *:hover {
+    z-index: 2;
+    transform: rotate(0deg) !important;
+    transition: transform 0.7s ease 0s;
+  }
+
+  .c-request__img > *:hover img {
+    transform: scale(1.75);
+    transition: transform 0.7s ease 0s;
+  }
+
+  .no-desktop {
+    display: none;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -656,6 +713,19 @@ button {
   h1 {
     font-size: 48px;
     line-height: 59px;
+  }
+
+  h2 {
+    font-size: 32px !important;
+    line-height: 39px;
+  }
+
+  .container-md {
+    max-width: 706px;
+  }
+
+  .container-not-left {
+    padding-left: 159px !important;
   }
 
   .city-list {

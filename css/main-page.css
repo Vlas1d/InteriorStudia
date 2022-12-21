@@ -131,7 +131,8 @@
 
 .about__text {
   padding-top: 80px;
-  width: 515px;
+  max-width: 525px;
+  padding-right: 10px;
 }
 
 .about__text h2 {
@@ -303,6 +304,42 @@
 
   .bg-slider__next span {
     margin: 2px 0px 0px 12px;
+  }
+
+  .about__text {
+    padding-top: 57px;
+    max-width: 455px;
+    padding-right: 10px;
+  }
+
+  .about__text h2 {
+    margin-bottom: 12px;
+  }
+
+  .about__text div {
+    margin-bottom: 35px;
+  }
+
+  .about {
+    padding: 124px 0px 0px;
+  }
+
+  .ceo {
+    padding: 154px 18px 133px 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  .about__img {
+    display: none;
+  }
+
+  .ceo {
+    flex-wrap: wrap;
+  }
+
+  .ceo__text {
+    margin-left: auto;
   }
 }
 

@@ -58,6 +58,16 @@
   opacity: 0;
 }
 
+.inline-menu p {
+  opacity: 1 !important;
+}
+
 .request {
   padding: 104px 0px 195px;
+}
+
+@media (min-width: 500px) {
+  .inline-menu label:hover {
+    color: rgb(70, 70, 70);
+  }
 }

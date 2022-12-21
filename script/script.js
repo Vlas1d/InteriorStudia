@@ -38,6 +38,15 @@ const swiperAbout = new Swiper('.about-slider__images', {
         draggable: true,
     },
 });
+const swiperNews = new Swiper('.news-slider', {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 48,
+});
+
+//-------------ADAPTATION----------------------------------------------------------------------------
+
+
 
 //-------------BACKGROUND-COLOR-CHANGE----------------------------------------------------------------
 
@@ -86,8 +95,25 @@ $('.city-list__items p').on('click', function () {
 
 //-------------REQUEST-IMG-----------------------------------------------------------------
 
+/*
 if (window.innerWidth >= 1100) {
     var reqImg = document.querySelectorAll('.c-request__img img');
+    const reqImgRotate = Array('rotate(-5.99deg)', 'rotate(-0.33deg)', 'rotate(-5.81deg)', 'rotate(-1.72deg)',
+        'rotate(-10.5deg)', 'rotate(-5.99deg)', 'rotate(-0.33deg)', 'rotate(-5.81deg)', 'rotate(-1.72deg)', 'rotate(-10.5deg)');
+    const reqIimgMarginTop = Array('0px', '-10.4px', '-24.4px', '-46px', '-77px', '-92px', '-102px', '-116px', '-138px', '-169px');
+    const reqIimgMarginLeft = Array('0px', '52.8px', '105.3px', '161px', '226px', '263.5px', '316.5px', '369px', '424.7px', '490px');
+
+    for (let i = 0; i < reqImg.length; i++) {
+        reqImg[i].style.marginTop = reqIimgMarginTop[i];
+        reqImg[i].style.transform = reqImgRotate[i];
+        reqImg[i].style.marginLeft = reqIimgMarginLeft[i];
+        //reqImg[i].style.transition = 'all 1s ease 2.5s';
+    }
+}
+*/
+
+if (window.innerWidth >= 1100) {
+    var reqImg = document.querySelectorAll('.c-request__img > *');
     const reqImgRotate = Array('rotate(-5.99deg)', 'rotate(-0.33deg)', 'rotate(-5.81deg)', 'rotate(-1.72deg)',
         'rotate(-10.5deg)', 'rotate(-5.99deg)', 'rotate(-0.33deg)', 'rotate(-5.81deg)', 'rotate(-1.72deg)', 'rotate(-10.5deg)');
     const reqIimgMarginTop = Array('0px', '-10.4px', '-24.4px', '-46px', '-77px', '-92px', '-102px', '-116px', '-138px', '-169px');
