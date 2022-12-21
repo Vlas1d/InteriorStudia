@@ -303,8 +303,7 @@ p {
   opacity: 0.75;
 }
 
-img,
-picture {
+img {
   width: initial;
   height: initial;
 }
@@ -424,10 +423,6 @@ button {
   height: 0.5px;
   background: #000;
   margin-left: 9px;
-}
-
-.part-title {
-  position: absolute;
 }
 
 .dark-bg {
@@ -718,6 +713,15 @@ button {
   h2 {
     font-size: 32px !important;
     line-height: 39px;
+  }
+
+  h4 {
+    font-size: 20px !important;
+    line-height: 25px;
+  }
+
+  .container_ {
+    max-width: 912px;
   }
 
   .container-md {
