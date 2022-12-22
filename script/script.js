@@ -46,6 +46,23 @@ const swiperNews = new Swiper('.news-slider', {
 
 //-------------ADAPTATION----------------------------------------------------------------------------
 
+//--------------BURGER-MENU----------------------------------------------------------------------
+
+$('.header__burger').on('click', function () {
+    if (document.querySelector('.header.menu-opened') == null) {
+        $('.header').toggleClass('menu-opened');
+    }
+    else {
+        setTimeout(function () {
+            $('.header').toggleClass('menu-opened');
+        }, 500);
+    }
+    $('.burger-menu').toggleClass('menu-opened');
+    $('.header__burger').toggleClass('menu-opened');
+});
+
+
+//-----------------------------------------------------------------------------------------------
 
 
 //-------------BACKGROUND-COLOR-CHANGE----------------------------------------------------------------

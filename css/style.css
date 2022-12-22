@@ -12,22 +12,20 @@
   font-weight: 600;
   mix-blend-mode: difference;
   color: rgb(179, 179, 179);
+  transition: all 0.3s ease 0s;
   z-index: 999;
 }
 
-.header__logo {
-  letter-spacing: 4px;
+.header > * {
+  z-index: 1;
 }
 
 .header__menu {
   margin-left: 10.9%;
 }
 
-.menu {
-  display: flex;
-  font-size: 11px;
-  line-height: 13px;
-  letter-spacing: 0.06em;
+.header__logo {
+  letter-spacing: 4px;
 }
 
 .header__end {
@@ -42,6 +40,100 @@
 
 .header__end > *:not(:first-child) {
   margin-left: 83px;
+}
+
+.header.menu-opened {
+  mix-blend-mode: normal;
+  padding-top: 15px;
+}
+
+.header.menu-opened .header__burger {
+  margin-top: 10px;
+}
+
+.menu {
+  display: flex;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
+}
+
+.burger-menu {
+  position: fixed;
+  top: -105vh;
+  left: -105vw;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0% 0% 100% 0%;
+  background: #080808;
+  opacity: 0.98;
+  z-index: 0;
+  transition: all 0.7s ease 0s, border-radius 0.7s ease 0.1s;
+  display: flex;
+  align-items: center;
+  padding-left: 20.6%;
+}
+
+.burger-menu__footer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  left: 56px;
+  z-index: 100;
+  color: #fff;
+  font-size: 11px;
+}
+
+.burger-menu__footer > span *:not(:last-child) {
+  margin-right: 17px;
+}
+
+.burger-menu__footer > span {
+  margin-right: 80px;
+}
+
+.burger-menu__footer > label {
+  margin-right: 40px;
+}
+
+.burger-menu__footer > a {
+  letter-spacing: 0.06em;
+  margin-right: 32px;
+}
+
+.burger-menu__footer input {
+  position: absolute;
+  opacity: 0 !important;
+}
+
+.burger-menu.menu-opened {
+  visibility: visible !important;
+  left: 0px !important;
+  top: 0px !important;
+  border-radius: 0% 0% 0% 0%;
+}
+
+.menu-burger {
+  margin-bottom: 14px;
+}
+
+.menu-burger > *:not(:last-child) {
+  margin-bottom: 4.4vh;
+}
+
+.menu-burger__item {
+  transition: all 0.3s ease 0s;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.menu-burger__item:hover {
+  opacity: 1;
+  padding-left: 30px;
 }
 
 .opacity-button {
@@ -493,8 +585,8 @@ button {
 }
 
 .city-list__items input {
-  position: absolute;
-  opacity: 0;
+  position: absolute !important;
+  opacity: 0 !important;
 }
 
 .city-list__items input:checked ~ label {
@@ -588,6 +680,32 @@ button {
 }
 
 @media (min-width: 800px) {
+  .header__logo:hover {
+    transform: scale(2) rotate(360deg);
+    transition: transform 0.25s ease 0s;
+  }
+
+  .menu__item:hover {
+    transform: scale(1.5);
+    transition: transform 0.5s ease 0s;
+  }
+
+  .discover-button:hover {
+    text-shadow: 2px 0px 4px #000;
+  }
+
+  .discover-button:hover hr {
+    box-shadow: 2px 0px 4px #000;
+    margin: 0px;
+    width: 100%;
+  }
+
+  .discover-button:hover span {
+    position: absolute;
+    transform: translate(30%, -70%) scale(1.3);
+    transition: all 0.5s ease 0s;
+  }
+
   .c-gallery__two-item {
     display: flex;
     justify-content: space-between;
@@ -609,33 +727,9 @@ button {
   }
 }
 
-@media (min-width: 1099.9px) {
-  .city-list {
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 1.15336px 1.22544px rgba(0, 0, 0, 0.2), inset 0px -0.288339px 0.0720847px rgba(255, 255, 255, 0.23);
-    backdrop-filter: blur(1px);
-    border-radius: 8.70783px;
-  }
-
-  .city-list__items {
-    background: rgba(125, 125, 125, 0.85);
-    color: rgb(195, 195, 195);
-  }
-}
-
 @media (min-width: 1100px) {
-  .header__logo:hover {
-    transform: scale(2) rotate(360deg);
-    transition: transform 0.25s ease 0s;
-  }
-
   .menu__item:not(:last-child) {
     margin-right: 48px;
-  }
-
-  .menu__item:hover {
-    transform: scale(1.5);
-    transition: transform 0.5s ease 0s;
   }
 
   .c-request__info p {
@@ -647,20 +741,16 @@ button {
     z-index: 1;
   }
 
-  .discover-button:hover {
-    text-shadow: 2px 0px 4px #000;
+  .city-list {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1.15336px 1.22544px rgba(0, 0, 0, 0.2), inset 0px -0.288339px 0.0720847px rgba(255, 255, 255, 0.23);
+    backdrop-filter: blur(1px);
+    border-radius: 8.70783px;
   }
 
-  .discover-button:hover hr {
-    box-shadow: 2px 0px 4px #000;
-    margin: 0px;
-    width: 100%;
-  }
-
-  .discover-button:hover span {
-    position: absolute;
-    transform: translate(30%, -70%) scale(1.3);
-    transition: all 0.5s ease 0s;
+  .city-list__items {
+    background: rgba(125, 125, 125, 0.85);
+    color: rgb(195, 195, 195);
   }
 }
 
@@ -701,6 +791,69 @@ button {
     position: absolute;
   }
 
+  .header__burger {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.06em;
+    color: rgb(179, 179, 179);
+    transition: all 0.5s ease 0s;
+    margin-bottom: 3.5px;
+    margin-left: 10.8%;
+    cursor: pointer;
+  }
+
+  .header__burger span {
+    transition: all 0.3s ease 0s !important;
+  }
+
+  .header__burger span:first-child {
+    margin-top: -6.5px;
+    margin: -6.5px 24px 0px 0px;
+    display: flex;
+    flex: 0 0 28px;
+    height: 1.5px;
+    background: rgb(179, 179, 179);
+  }
+
+  .header__burger span:first-child::after {
+    transition: all 0.3s ease 0.15s !important;
+    content: "";
+    flex: 1 1 28px;
+    height: 1.5px;
+    background: rgb(179, 179, 179);
+    margin-top: 7px;
+  }
+
+  .header__burger.menu-opened span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .header__burger.menu-opened span:first-child::after {
+    transform: rotate(-90deg);
+    margin: 0;
+  }
+
+  .header__burger.menu-opened span:last-child {
+    opacity: 0;
+  }
+
+  .header__end > *:not(:first-child) {
+    margin-left: 55px;
+  }
+
+  .header {
+    min-height: 92px;
+    padding: 0px 5.5% 0px 5.3%;
+  }
+
+  .opacity-button {
+    min-height: 42px !important;
+    padding: 0px 35px;
+  }
+
   .c-request__img {
     display: none;
   }
@@ -731,7 +884,9 @@ button {
   .container-not-left {
     padding-left: 159px !important;
   }
+}
 
+@media (max-width: 1100.1px) {
   .city-list {
     border: 1px solid #C4C4C4;
     border-radius: 88px;
