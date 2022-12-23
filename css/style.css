@@ -177,23 +177,7 @@
 }
 
 .c-request__info div {
-  width: 339px;
-  align-self: flex-end;
   z-index: 1;
-}
-
-.c-request__info p {
-  margin-bottom: 45px;
-}
-
-.c-request__info_title {
-  justify-self: left;
-  align-self: flex-start !important;
-  width: 424px !important;
-}
-
-.c-request__info h2 {
-  line-height: 51px;
 }
 
 .c-lorem {
@@ -733,10 +717,12 @@ button {
   }
 
   .c-request__info p {
+    margin-bottom: 45px;
     text-shadow: 1px 1px 3px #000;
   }
 
   .c-request__info h2 {
+    line-height: 51px;
     text-shadow: 1px 1px 3px #000;
     z-index: 1;
   }
@@ -755,6 +741,17 @@ button {
 }
 
 @media (min-width: 1100.1px) {
+  .c-request__info div {
+    max-width: 339px;
+    align-self: flex-end;
+  }
+
+  .c-request__info_title {
+    width: 424px !important;
+    justify-self: left;
+    align-self: flex-start !important;
+  }
+
   .c-request__img {
     position: absolute;
     left: 14.5%;
@@ -854,6 +851,32 @@ button {
     padding: 0px 35px;
   }
 
+  .c-request__info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 341px;
+  }
+
+  .c-request__info div {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .c-request__info_title {
+    width: 360px !important;
+  }
+
+  .c-request__info h2 {
+    line-height: 45px;
+  }
+
+  .c-request__info p {
+    margin-bottom: 68px;
+  }
+
   .c-request__img {
     display: none;
   }
@@ -883,6 +906,10 @@ button {
 
   .container-not-left {
     padding-left: 159px !important;
+  }
+
+  .button {
+    min-height: 42px;
   }
 }
 
