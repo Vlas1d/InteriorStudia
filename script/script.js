@@ -46,6 +46,10 @@ const swiperNews = new Swiper('.news-slider', {
 
 //-------------ADAPTATION----------------------------------------------------------------------------
 
+if (window.innerWidth < 1100) {
+    $('#header-contacts').html('Get in touch');
+}
+
 //--------------BURGER-MENU----------------------------------------------------------------------
 
 $('.header__burger').on('click', function () {
@@ -146,9 +150,22 @@ if (window.innerWidth >= 1100) {
 
 //-------------LOREM-IMG-----------------------------------------------------------------
 
+var loremImgHorizontal;
+var loremImgVertical;
+
 var loremImg = document.querySelectorAll('.c-lorem__img > *');
-var loremImgHorizontal = Array('-136px', '214px', '80px', '-205px', '389px', '-151px', '47px', '255px');
-var loremImgVertical = Array('-161px', '-10px', '28px', '120px', '-110px', '33px', '0px', '-205px');
+
+if (window.innerWidth > 1100) {
+    loremImgHorizontal = Array('-136px', '214px', '80px', '-205px', '389px', '-151px', '47px', '255px');
+    loremImgVertical = Array('-161px', '-10px', '28px', '120px', '-110px', '33px', '0px', '-205px');
+}
+else if (window.innerWidth <= 1100 && window.innerWidth > 800) {
+    loremImgHorizontal = Array('-276px', '-26px', '-80px', '-326px', '225px', '-247px', '14px', '185px');
+    loremImgVertical = Array('-161px', '5px', '65px', '137px', '-74px', '35px', '38px', '-138px');
+}
+
+
+
 for (let i = 0; i < loremImg.length; i++) {
     if (i < loremImg.length / 2) {
         loremImg[i].style.left = loremImgHorizontal[i];

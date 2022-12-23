@@ -197,7 +197,7 @@
 
 .c-lorem__text h1 {
   color: inherit;
-  margin-bottom: 10px;
+  margin: 5px 0 15px -2px;
 }
 
 .c-lorem__text p {
@@ -747,7 +747,7 @@ button {
   }
 
   .c-request__info_title {
-    width: 424px !important;
+    max-width: 424px !important;
     justify-self: left;
     align-self: flex-start !important;
   }
@@ -779,6 +779,13 @@ button {
 
   .no-desktop {
     display: none;
+  }
+}
+
+@media (min-width: 2000px) {
+  .c-lorem {
+    max-width: 2000px;
+    margin: 0px auto;
   }
 }
 
@@ -851,6 +858,11 @@ button {
     padding: 0px 35px;
   }
 
+  .footer {
+    min-height: 86px;
+    padding: 0px 58px;
+  }
+
   .c-request__info {
     flex-direction: column;
     align-items: center;
@@ -881,6 +893,32 @@ button {
     display: none;
   }
 
+  .c-lorem picture {
+    transform: scale(0.845);
+  }
+
+  .c-lorem__text h1 {
+    color: inherit;
+    margin: 10px 0px 18px 10px;
+  }
+
+  .c-contacts {
+    padding: 104px 0px 155px;
+    min-height: 628px;
+  }
+
+  .c-contacts {
+    max-width: 706px !important;
+  }
+
+  .contact-data > *:not(:last-child) {
+    margin-bottom: 56px;
+  }
+
+  .contact-data__city > *:not(:last-child) {
+    margin-right: 49px;
+  }
+
   h1 {
     font-size: 48px;
     line-height: 59px;
@@ -889,6 +927,11 @@ button {
   h2 {
     font-size: 32px !important;
     line-height: 39px;
+  }
+
+  h3 {
+    font-size: 20px !important;
+    line-height: 25.3px;
   }
 
   h4 {
