@@ -61,14 +61,15 @@
 .burger-menu {
   position: fixed;
   top: -105vh;
-  left: -105vw;
+  left: 0vw;
   width: 100vw;
   height: 100vh;
-  border-radius: 0% 0% 100% 0%;
+  overflow: hidden;
+  border-radius: 0% 0% 30vw 30vw;
   background: #080808;
   opacity: 0.98;
   z-index: 0;
-  transition: all 0.7s ease 0s, border-radius 0.7s ease 0.1s;
+  transition: all 0.5s ease 0s, border-radius 0.3s ease 0.15s;
   display: flex;
   align-items: center;
   padding-left: 20.6%;
@@ -109,7 +110,6 @@
 
 .burger-menu.menu-opened {
   visibility: visible !important;
-  left: 0px !important;
   top: 0px !important;
   border-radius: 0% 0% 0% 0%;
 }
