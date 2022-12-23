@@ -159,7 +159,7 @@ if (window.innerWidth > 1100) {
     loremImgHorizontal = Array('-136px', '214px', '80px', '-205px', '389px', '-151px', '47px', '255px');
     loremImgVertical = Array('-161px', '-10px', '28px', '120px', '-110px', '33px', '0px', '-205px');
 }
-else if (window.innerWidth <= 1100 && window.innerWidth > 800) {
+else if (window.innerWidth <= 1100) {
     loremImgHorizontal = Array('-276px', '-26px', '-80px', '-326px', '225px', '-247px', '14px', '185px');
     loremImgVertical = Array('-161px', '5px', '65px', '137px', '-74px', '35px', '38px', '-138px');
 }

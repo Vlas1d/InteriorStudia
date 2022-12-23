@@ -4,7 +4,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   min-height: 96px;
@@ -22,15 +22,22 @@
 
 .header__menu {
   margin-left: 10.9%;
+  order: 2;
 }
 
 .header__logo {
   letter-spacing: 4px;
+  order: 1;
+}
+
+.header__burger {
+  order: 3;
 }
 
 .header__end {
   display: flex;
   margin-left: auto;
+  order: 4;
 }
 
 .header__end * {
@@ -803,6 +810,7 @@ button {
     line-height: 13px;
     letter-spacing: 0.06em;
     color: rgb(179, 179, 179);
+    min-height: 13px;
     transition: all 0.5s ease 0s;
     margin-bottom: 3.5px;
     margin-left: 10.8%;
@@ -956,6 +964,12 @@ button {
   }
 }
 
+@media (max-width: 1100px) and (max-width: 800px) {
+  .header__burger span:last-child {
+    display: none;
+  }
+}
+
 @media (max-width: 1100.1px) {
   .city-list {
     border: 1px solid #C4C4C4;
@@ -964,5 +978,35 @@ button {
 
   .city-list__items {
     color: rgb(225, 225, 225);
+  }
+}
+
+@media (max-width: 800px) {
+  .header__burger {
+    order: 4;
+    margin-top: 5px;
+  }
+
+  .header__end {
+    order: 3;
+  }
+
+  .header__end > *:first-child {
+    margin-right: 18px;
+    margin-top: 3px;
+  }
+
+  .header__end .button {
+    display: none;
+  }
+
+  .header {
+    min-height: 60px;
+    padding: 0px 6.8% 0px 6.1%;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
   }
 }

@@ -4,7 +4,7 @@
   font-size: 11px;
   line-height: 13px;
   height: 100vh;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .bg-slider__footer {
@@ -34,6 +34,11 @@
   margin-right: 32px;
 }
 
+.bg-slider__footer_contacts {
+  display: flex;
+  letter-spacing: 0.06em;
+}
+
 .bg-slider__wrapper {
   display: flex;
   width: 100%;
@@ -44,7 +49,7 @@
 .bg-slider .swiper-slide {
   position: relative;
   display: flex;
-  width: 85.2%;
+  width: auto;
   height: 100%;
 }
 
@@ -76,6 +81,21 @@
 .bg-slider input {
   position: absolute;
   opacity: 0;
+}
+
+.bg-slider .swiper-slide-next > * {
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+}
+
+.bg-slider .swiper-slide-next > img,
+.bg-slider .swiper-slide-next > picture {
+  opacity: 1 !important;
+}
+
+.bg-slider .swiper-slide-active > * {
+  transition: all 0.5s ease 0s;
+  opacity: 1;
 }
 
 .bg-slider__title {
@@ -114,7 +134,6 @@
   font-size: 50px;
   letter-spacing: 0.1em;
   color: transparent;
-  -webkit-text-stroke: 0.3px #fff;
 }
 
 .bg-slider__next span {
@@ -242,7 +261,7 @@
 
 .gallery__head {
   text-align: center;
-  width: 450px;
+  max-width: 450px;
   padding: 139px 0px 133px;
 }
 
@@ -327,6 +346,12 @@
 .contacts {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)), url("../img/contacts-bg.png");
   background-size: cover !important;
+}
+
+@media (min-width: 800.1px) {
+  .bg-slider__next {
+    -webkit-text-stroke: 0.3px #fff;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -498,6 +523,74 @@
 }
 
 @media (max-width: 800px) {
+  .bg-slider__footer {
+    bottom: 23px;
+    left: 24px;
+    width: 71%;
+    justify-content: space-between;
+  }
+
+  .bg-slider__footer > span {
+    display: none !important;
+  }
+
+  .bg-slider__footer > label {
+    margin-right: 0px;
+    align-self: flex-end;
+    margin-bottom: 1px;
+  }
+
+  .bg-slider__footer_contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .bg-slider__footer_contacts a {
+    text-align: right;
+  }
+
+  .bg-slider__footer_contacts > *:first-child {
+    margin-bottom: 6.5px;
+  }
+
+  .bg-slider__footer_contacts > *:last-child {
+    margin-bottom: -1.5px;
+  }
+
+  .bg-slider__title {
+    margin: 65px 0px 0px 24px;
+  }
+
+  .bg-slider__title .discover-button {
+    margin-top: 31px;
+  }
+
+  .bg-slider__next {
+    right: 20px;
+    bottom: 24px;
+  }
+
+  .bg-slider__next h1 {
+    font-family: "Montserrat";
+    color: #fff;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+  }
+
+  .bg-slider__next h1 br {
+    display: none;
+  }
+
+  .bg-slider__next span {
+    display: none;
+  }
+
+  .part-title {
+    display: none;
+  }
+
   .about__img {
     display: none;
   }
