@@ -49,6 +49,16 @@ const swiperNews = new Swiper('.news-slider', {
 if (window.innerWidth < 1100) {
     $('#header-contacts').html('Get in touch');
 }
+if (window.innerWidth < 500) {
+    var galleryMain = document.querySelectorAll('.gallery__item h3');
+    var galleryMainValues = Array('Residence by the lighthouse', 'Eyewear store interior', 'Minimalist style home', 'Eyewear store interior', 'House on a Hillside');
+    let i = 0;
+
+    galleryMain.forEach(element => {
+        element.textContent = galleryMainValues[i];
+        i++;
+    });
+}
 
 //--------------BURGER-MENU----------------------------------------------------------------------
 

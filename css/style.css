@@ -1294,6 +1294,32 @@ button {
     margin-bottom: -1.5px;
   }
 
+  .c-request {
+    min-height: 1px;
+  }
+
+  .c-request__info {
+    justify-content: start;
+    min-height: 1px;
+    height: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .c-request__info h2 {
+    max-width: 82%;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+
+  .c-request__info div {
+    align-items: flex-start;
+  }
+
+  .c-request__info p {
+    margin-bottom: 41px;
+  }
+
   h1 {
     font-size: 40px;
     line-height: 40px;
