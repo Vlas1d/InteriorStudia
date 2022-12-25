@@ -529,6 +529,10 @@
   .contacts {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)), url("../img/contacts-bg-md.png");
   }
+
+  .contacts {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)), url("../img/contacts-bg-small.png");
+  }
 }
 
 @media (max-width: 800px) {
@@ -740,6 +744,10 @@
   .request {
     padding: 31px 0px 96px;
   }
+
+  .lorem {
+    height: 675px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -768,4 +776,9 @@
 @media (max-width: 1100px) {
 
   .webp .contacts { background: linear-gradient(90deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)), url(../img/contacts-bg-md.webp); }
+}
+
+@media (max-width: 1100px) {
+
+  .webp .contacts { background: linear-gradient(90deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)), url(../img/contacts-bg-small.webp); }
 }

@@ -49,6 +49,12 @@ const swiperNews = new Swiper('.news-slider', {
 if (window.innerWidth < 1100) {
     $('#header-contacts').html('Get in touch');
 }
+if (window.innerWidth < 800) {
+    $('.c-lorem__text h1').html('@hilight.design');
+}
+if (window.innerWidth < 500) {
+    $('.c-lorem__img').html('<img class="mobile-lorem" src="../img/lorem-mobile.jpg" alt="design image 1"></img>');
+}
 if (window.innerWidth < 500) {
     var galleryMain = document.querySelectorAll('.gallery__item h3');
     var galleryMainValues = Array('Residence by the lighthouse', 'Eyewear store interior', 'Minimalist style home', 'Eyewear store interior', 'House on a Hillside');
@@ -169,9 +175,13 @@ if (window.innerWidth > 1100) {
     loremImgHorizontal = Array('-136px', '214px', '80px', '-205px', '389px', '-151px', '47px', '255px');
     loremImgVertical = Array('-161px', '-10px', '28px', '120px', '-110px', '33px', '0px', '-205px');
 }
-else if (window.innerWidth <= 1100) {
+else if (window.innerWidth <= 1100 && window.innerWidth > 500) {
     loremImgHorizontal = Array('-276px', '-26px', '-80px', '-326px', '225px', '-247px', '14px', '185px');
     loremImgVertical = Array('-161px', '5px', '65px', '137px', '-74px', '35px', '38px', '-138px');
+}
+else {
+    loremImgHorizontal = null;
+    loremImgVertical = null;
 }
 
 
