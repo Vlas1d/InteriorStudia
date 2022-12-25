@@ -39,6 +39,10 @@
   letter-spacing: 0.06em;
 }
 
+.bg-slider__footer_contacts > *:first-child {
+  margin-right: 48px;
+}
+
 .bg-slider__wrapper {
   display: flex;
   width: 100%;
@@ -49,7 +53,7 @@
 .bg-slider .swiper-slide {
   position: relative;
   display: flex;
-  width: auto;
+  width: 85.2%;
   height: 100%;
 }
 
@@ -152,6 +156,7 @@
   text-transform: uppercase;
   color: #828282;
   opacity: 0.32;
+  white-space: nowrap;
   transform: rotate(-90deg);
 }
 
@@ -336,7 +341,7 @@
 }
 
 .request {
-  padding: 105px 0px 143px;
+  padding: 105px 0px 144px;
 }
 
 .lorem {
