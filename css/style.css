@@ -10,7 +10,6 @@
   min-height: 96px;
   padding: 0px 4.45% 0px 4.3%;
   font-weight: 600;
-  mix-blend-mode: difference;
   color: rgb(179, 179, 179);
   transition: all 0.3s ease 0s;
   z-index: 999;
@@ -153,7 +152,7 @@
 .pop-up {
   position: fixed;
   top: 0px;
-  left: -210vw;
+  left: 0vw;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -202,6 +201,22 @@
   display: inherit;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.pop-up__data_info textarea {
+  width: 100%;
+  max-height: 120px;
+  white-space: wrap;
+  background: transparent;
+  border-bottom: 1px solid rgba(214, 214, 214, 0.7);
+}
+
+.pop-up__data_info textarea::placeholder {
+  color: #3A3E4B;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
 }
 
 .pop-up__data_info input {
