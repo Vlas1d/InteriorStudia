@@ -63,16 +63,16 @@ if (window.innerWidth < 800) {
 if (window.innerWidth < 500) {
     $('.c-lorem__img').html('<img class="mobile-lorem" src="../img/lorem-mobile.jpg" alt="design image 1"></img>');
 }
-if (window.innerWidth < 500) {
-    var galleryMain = document.querySelectorAll('.gallery__item h3');
-    var galleryMainValues = Array('Residence by the lighthouse', 'Eyewear store interior', 'Minimalist style home', 'Eyewear store interior', 'House on a Hillside');
-    let i = 0;
 
-    galleryMain.forEach(element => {
-        element.textContent = galleryMainValues[i];
-        i++;
-    });
-}
+var galleryMain = document.querySelectorAll('.gallery__item h3');
+var galleryMainValues = Array('Residence by the lighthouse', 'Eyewear store interior', 'Minimalist style home', 'Eyewear store interior', 'House on a Hillside', "House on a Hillside");
+let i = 0;
+
+galleryMain.forEach(element => {
+    element.textContent = galleryMainValues[i];
+    i++;
+});
+
 
 //--------------BURGER-MENU----------------------------------------------------------------------
 
