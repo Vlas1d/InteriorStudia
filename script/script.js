@@ -46,6 +46,10 @@ const swiperNews = new Swiper('.news-slider', {
 
 //-------------ADAPTATION----------------------------------------------------------------------------
 
+document.querySelector('.fullHeight').style.height = window.innerHeight + 'px';
+console.log(window.innerHeight);
+
+
 if (window.innerWidth < 1100) {
     $('#header-contacts').html('Get in touch');
 }
