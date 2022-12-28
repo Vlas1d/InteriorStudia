@@ -46,7 +46,12 @@ const swiperNews = new Swiper('.news-slider', {
 
 //-------------ADAPTATION----------------------------------------------------------------------------
 
-document.querySelector('.fullHeight').style.height = window.innerHeight + 'px';
+document.querySelectorAll('.fullHeight').forEach(element => {
+    element.style.height = window.innerHeight + 'px';
+});
+document.querySelectorAll('.fullHeight-min').forEach(element => {
+    element.style.minHeight = window.innerHeight + 'px';
+});
 
 
 if (window.innerWidth < 1100) {
