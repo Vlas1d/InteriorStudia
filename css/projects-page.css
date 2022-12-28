@@ -116,6 +116,10 @@
 }
 
 @media (min-width: 500px) {
+  .inline-list {
+    display: none;
+  }
+
   .inline-menu label:hover {
     color: rgb(70, 70, 70);
   }
