@@ -81,6 +81,20 @@ $('.header__burger').on('click', function () {
     $('.header__burger').toggleClass('menu-opened');
 });
 
+//--------------POP-UP---------------------------------------------------------------------------------
+
+$('.request-pop-up').on('click', function () {
+    $('.header').toggleClass('pop-up-opened');
+
+    $('.pop-up').toggleClass('pop-up-opened');
+});
+$('.pop-up__close').on('click', function () {
+    setTimeout(function () {
+        $('.header').toggleClass('pop-up-opened');
+    }, 500);
+
+    $('.pop-up').toggleClass('pop-up-opened');
+});
 
 //-----------------------------------------------------------------------------------------------
 
