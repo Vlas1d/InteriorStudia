@@ -29,14 +29,25 @@
   z-index: 0;
 }
 
+.wrapper-no-limits:has(.about-slider) {
+  max-width: 100vw !important;
+  display: flex;
+  justify-content: center;
+}
+
+.about-slider.container-not-left {
+  max-width: 1440px !important;
+}
+
 .about-slider {
   display: flex;
   align-items: center;
-  padding: 110px 0px 133px 263px !important;
+  justify-content: space-between;
 }
 
 .about-slider__text {
-  min-width: 385px;
+  max-width: 385px;
+  width: 100%;
   margin-top: -30px;
 }
 
@@ -45,7 +56,9 @@
 }
 
 .about-slider__images {
-  margin: 30px 0px 0px 11%;
+  margin: 30px 0px 0px 10px;
+  max-width: 662px;
+  width: auto;
 }
 
 .about-slider__images .swiper-slide {
@@ -209,6 +222,94 @@
 
 .worker__info > span > span {
   margin-left: auto;
+}
+
+@media (min-width: 1440.1px) {
+  .about-slider {
+    padding: 110px 0px 133px 263px !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  .about-slider {
+    padding: 110px 0px 133px 18.3vw !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-slider {
+    padding: 110px 0px 133px 7vw !important;
+  }
+
+  .about-slider__images {
+    max-width: 550px;
+  }
+
+  .about-stats {
+    padding: 0px 0px 40px 3vw !important;
+  }
+
+  .about-stats__sm-img {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-slider {
+    padding: 110px 0px 100px 0px !important;
+    flex-direction: column;
+  }
+
+  .about-slider__text {
+    align-self: center;
+    text-align: center;
+  }
+
+  .about-slider__images {
+    max-width: 100%;
+    margin: 30px 0px 0px 0px;
+  }
+
+  .about-stats {
+    padding: 0px 0px 40px 0vw !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-stats > picture {
+    width: 100vw;
+  }
+
+  .about-stats > picture img {
+    width: 100%;
+  }
+
+  .about-stats__data {
+    margin-left: 0px;
+    margin-bottom: 7px;
+  }
+
+  .about-stats .ab-stats__items {
+    max-width: 80vw;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .about-stats .ab-stats p {
+    max-width: 70vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-stats .ab-stats__items {
+    max-width: 95vw;
+  }
+
+  .about-stats .ab-stats p {
+    max-width: 95vw;
+  }
 }
 
 .webp .about-bg__image { background: url(../img/about-bg.webp) bottom/cover no-repeat; }
