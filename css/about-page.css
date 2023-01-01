@@ -155,13 +155,17 @@
 }
 
 .founder__info_point p {
-  width: 380px;
+  max-width: 380px;
   font-size: 20px;
   line-height: 170.66%;
 }
 
 .founder__info picture {
   margin-top: auto;
+}
+
+.founder__stats {
+  position: relative;
 }
 
 .founder__stats_items {
@@ -252,6 +256,14 @@
   .about-stats__sm-img {
     display: none;
   }
+
+  .founder {
+    padding: 70px 0px 146px 0px;
+  }
+
+  .founder__stats {
+    padding-left: 15px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -267,7 +279,12 @@
 
   .about-slider__images {
     max-width: 100%;
+    height: 50vw;
     margin: 30px 0px 0px 0px;
+  }
+
+  .about-slider__images .swiper-slide * {
+    height: 100% !important;
   }
 
   .about-stats {
@@ -300,15 +317,93 @@
     max-width: 70vw;
     text-align: center;
   }
+
+  .founder {
+    flex-direction: column;
+    padding: 20px 0px 100px 0px;
+  }
+
+  .founder__info > h2 {
+    margin-top: 30px;
+  }
+
+  .founder__info_point {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .founder__info > *:not(:last-child) {
+    order: 2;
+    margin-left: 0px;
+  }
+
+  .founder__info picture {
+    order: 1;
+    align-self: center;
+  }
+
+  .founder__stats {
+    display: flex;
+    padding-left: 0px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+  }
+
+  .founder__stats_items {
+    flex-direction: column;
+    padding: 0px 0px 0px 50px;
+  }
+
+  .founder__stats_items h1 {
+    color: #000 !important;
+    line-height: 80px;
+  }
+
+  .founder__stats_items p {
+    line-height: 132%;
+  }
+
+  .founder__stats p {
+    max-width: 90vw;
+  }
+
+  .worker {
+    flex-direction: column;
+  }
+
+  .worker .worker-mail h2 {
+    line-height: 150%;
+  }
 }
 
 @media (max-width: 500px) {
+  .about-bg__title p {
+    max-width: 385px;
+    width: 100%;
+    padding: 0px 10px;
+  }
+
   .about-stats .ab-stats__items {
     max-width: 95vw;
   }
 
   .about-stats .ab-stats p {
     max-width: 95vw;
+  }
+
+  .founder__stats_items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    margin-bottom: 70px;
+  }
+
+  .founder__stats_items > *:not(:last-child) {
+    margin-right: 20px;
   }
 }
 
