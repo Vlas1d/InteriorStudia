@@ -208,24 +208,25 @@ else {
 }
 
 
-
-for (let i = 0; i < loremImg.length; i++) {
-    if (i < loremImg.length / 2) {
-        loremImg[i].style.left = loremImgHorizontal[i];
-        if (i >= loremImg.length / 4) {
-            loremImg[i].style.top = loremImgVertical[i];
+if (window.innerWidth > 500) {
+    for (let i = 0; i < loremImg.length; i++) {
+        if (i < loremImg.length / 2) {
+            loremImg[i].style.left = loremImgHorizontal[i];
+            if (i >= loremImg.length / 4) {
+                loremImg[i].style.top = loremImgVertical[i];
+            }
+            else {
+                loremImg[i].style.bottom = loremImgVertical[i];
+            }
         }
-        else {
-            loremImg[i].style.bottom = loremImgVertical[i];
-        }
-    }
-    if (i >= loremImg.length / 2) {
-        loremImg[i].style.right = loremImgHorizontal[i];
-        if (i >= (loremImg.length / 4) + (loremImg.length / 2)) {
-            loremImg[i].style.top = loremImgVertical[i];
-        }
-        else {
-            loremImg[i].style.bottom = loremImgVertical[i];
+        if (i >= loremImg.length / 2) {
+            loremImg[i].style.right = loremImgHorizontal[i];
+            if (i >= (loremImg.length / 4) + (loremImg.length / 2)) {
+                loremImg[i].style.top = loremImgVertical[i];
+            }
+            else {
+                loremImg[i].style.bottom = loremImgVertical[i];
+            }
         }
     }
 }
