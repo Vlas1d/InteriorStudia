@@ -147,7 +147,7 @@
 .mail {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/news/footer-bg.jpg);
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 654px;
 }
 
@@ -359,6 +359,63 @@
   .inline-menu {
     display: none;
   }
+
+  .mail {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/news/footer-bg-small.jpg) left/cover no-repeat;
+    height: 518px;
+  }
+
+  .content-mail {
+    padding: 15px 0px 5px 24px !important;
+    min-height: 1px;
+  }
+
+  .content-mail h2 {
+    line-height: 32px;
+    text-align: left;
+    max-width: 83%;
+    margin-bottom: 20px;
+  }
+
+  .content-mail p {
+    text-align: left;
+    margin-bottom: 37px;
+  }
+
+  .content-mail__info {
+    justify-content: start;
+  }
+
+  .content-mail .worker-mail_input input {
+    padding-bottom: 5px !important;
+  }
+
+  .content-mail .worker-mail_input button {
+    margin-top: 7px;
+  }
+
+  .content-mail input {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 170%;
+    letter-spacing: normal;
+  }
+
+  .content-mail__info p {
+    max-width: 98% !important;
+    width: 100%;
+  }
+
+  .content-mail__info div:not(:first-child) {
+    max-width: 96.5%;
+    align-self: flex-start;
+    text-align: left;
+  }
 }
 
 .webp .mail { background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/news/footer-bg.webp); }
+
+@media (max-width: 500px) {
+
+  .webp .mail { background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/news/footer-bg-small.webp) left/cover no-repeat; }
+}

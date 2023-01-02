@@ -56,6 +56,7 @@ document.querySelectorAll('.fullHeight-min').forEach(element => {
 
 if (window.innerWidth < 1100) {
     $('#header-contacts').html('Get in touch');
+    $('.content-mail p').html('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.');
 }
 if (window.innerWidth < 800) {
     $('.c-lorem__text h1').html('@hilight.design');
