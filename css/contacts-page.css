@@ -13,4 +13,12 @@
   height: 100% !important;
 }
 
+@media (max-width: 500px) {
+  .contacts {
+    padding-top: 39px;
+    margin-left: -1px;
+    padding-bottom: 0px;
+  }
+}
+
 .webp .contacts { background: linear-gradient(90deg, rgba(0, 0, 0, 0.97), rgba(0, 0, 0, 0.91)), url(../img/contacts-bg.webp); }

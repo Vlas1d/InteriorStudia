@@ -125,6 +125,13 @@
   }
 }
 
+@media (min-width: 1100px) {
+  .gallery .c-gallery__one-item,
+  .gallery .c-gallery__two-item {
+    margin-bottom: 2px;
+  }
+}
+
 @media (max-width: 1100px) {
   .gallery__item {
     padding: 30.5px 84px 40px 32px;
@@ -165,7 +172,7 @@
   }
 
   .gallery__item {
-    padding: 22.5px 20px 30px 23px;
+    padding: 22.5px 20px 29px 24px;
   }
 
   .gallery__item > span {
@@ -185,7 +192,7 @@
   }
 
   .gallery .c-gallery__one-item .gallery__item {
-    padding: 22.5px 20px 30px 23px;
+    padding: 22.5px 20px 29px 24px;
   }
 
   .gallery .c-gallery__one-item .gallery__item > span {

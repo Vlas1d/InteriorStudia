@@ -86,7 +86,7 @@
 }
 
 .project-gallery .button {
-  margin: 72px auto;
+  margin: 71px auto;
 }
 
 .request {
@@ -119,6 +119,13 @@
 
 .next-project__image img {
   margin-bottom: -55px;
+}
+
+@media (min-width: 1100px) {
+  .project-gallery .c-gallery__one-item,
+  .project-gallery .c-gallery__two-item {
+    margin-bottom: 2px;
+  }
 }
 
 @media (max-width: 500px) {

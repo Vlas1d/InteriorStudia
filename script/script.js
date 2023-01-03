@@ -113,7 +113,7 @@ $('.pop-up__close').on('click', function () {
 });
 
 //-------------PRELOADER-----------------------------------------------------------------------------
-
+/*
 document.addEventListener('DOMContentLoaded', () => {
     const content_ = document.querySelectorAll('img');
     let i = 0;
@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+*/
 
 //-------------BACKGROUND-COLOR-CHANGE----------------------------------------------------------------
 
