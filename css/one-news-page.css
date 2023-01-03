@@ -174,11 +174,17 @@ hr.container-md {
   }
 
   .news-slider {
-    padding: 81px 0px 183px;
+    padding: 81px 0px 241px;
     margin-left: 0px;
   }
 
   .news-slider__content {
     margin-top: 40px;
+    height: 357px;
+  }
+
+  .news-slider__content .swiper-slide picture,
+  .news-slider__content .swiper-slide img {
+    height: 100%;
   }
 }

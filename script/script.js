@@ -41,7 +41,14 @@ const swiperAbout = new Swiper('.about-slider__images', {
 const swiperNews = new Swiper('.news-slider', {
     loop: true,
     slidesPerView: "auto",
-    spaceBetween: 48,
+    breakpoints: {
+        320: {
+            spaceBetween: 26,
+        },
+        800: {
+            spaceBetween: 48,
+        },
+    },
 });
 
 //-------------ADAPTATION----------------------------------------------------------------------------
