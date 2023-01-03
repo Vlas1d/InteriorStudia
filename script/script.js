@@ -1,23 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
-    /*
-    const form = document.getElementById('form1');
-    const pop_up = document.getElementById('pop-up');
+//document.addEventListener('DOMContentLoaded', function () {
+/*
+const form = document.getElementById('form1');
+const pop_up = document.getElementById('pop-up');
 
-    form.addEventListener('submit', formSend);
+form.addEventListener('submit', formSend);
 
-    async function formSend(e) {
-        e.preventDefault();
+async function formSend(e) {
+    e.preventDefault();
 
-        pop_up.setAttribute('class', 'pop-up__enable')
+    pop_up.setAttribute('class', 'pop-up__enable')
 
-        form.reset();
-    }
+    form.reset();
+}
 
-    $('.pop-up__close_button').on('click', function () {
-        $('#pop-up').toggleClass('pop-up__enable');
-    });
-    */
+$('.pop-up__close_button').on('click', function () {
+    $('#pop-up').toggleClass('pop-up__enable');
 });
+*/
+//});
 
 
 const swiper = new Swiper('.bg-slider__wrapper', {
@@ -69,7 +69,7 @@ if (window.innerWidth < 800) {
     $('.c-lorem__text h1').html('@hilight.design');
 }
 if (window.innerWidth < 500) {
-    $('.c-lorem__img').html('<img class="mobile-lorem" src="../img/lorem-mobile.jpg" alt="design image 1"></img>');
+    $('.c-lorem__img').html('<img class="mobile-lorem" src="./img/lorem-mobile.jpg" alt="design image 1"></img>');
 }
 
 var galleryMain = document.querySelectorAll('.gallery__item h3');
@@ -112,8 +112,27 @@ $('.pop-up__close').on('click', function () {
     $('.pop-up').toggleClass('pop-up-opened');
 });
 
-//-----------------------------------------------------------------------------------------------
+//-------------PRELOADER-----------------------------------------------------------------------------
 
+document.addEventListener('DOMContentLoaded', () => {
+    const content_ = document.querySelectorAll('img');
+    let i = 0;
+    content_.forEach((file, index) => {
+        file.onload = () => {
+            i++;
+            if (i < 20) {
+                $('.preloader__percent').html(`${((i * 100) / 20).toFixed(0)}%`);
+            }
+            else {
+                $('.preloader').html('HILIGHT');
+
+                $('.preloader').css('opacity', '0');
+                $('.preloader').css('top', '-130vh');
+                $('.preloader').css('border-radius', '50vw');
+            }
+        }
+    });
+});
 
 //-------------BACKGROUND-COLOR-CHANGE----------------------------------------------------------------
 

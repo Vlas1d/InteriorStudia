@@ -770,6 +770,33 @@ section {
   position: relative;
 }
 
+.page-not-found {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url("../img/contacts-bg.png");
+  background-size: cover !important;
+}
+
+.page-not-found__content {
+  width: 100%;
+  color: #fff;
+  padding: 12px 0 0 68px;
+}
+
+.page-not-found__content hr {
+  background: #fff !important;
+}
+
+.page-not-found__content a {
+  margin-top: 40px;
+}
+
+.page-not-found__content > * {
+  margin-bottom: 11px;
+}
+
 .wrapper_ {
   width: 100%;
   padding: 0px 15px;
@@ -1611,3 +1638,5 @@ button {
     line-height: 127%;
   }
 }
+
+.webp .page-not-found{ background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url(../img/contacts-bg.webp); }

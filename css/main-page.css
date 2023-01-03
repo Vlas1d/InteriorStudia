@@ -353,6 +353,25 @@
   background-size: cover !important;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.26em;
+  color: #FAFAFA;
+  transition: all 1s ease 0.5s;
+  z-index: 1000;
+}
+
 @media (min-width: 800.1px) {
   .bg-slider__next {
     -webkit-text-stroke: 0.3px #fff;
